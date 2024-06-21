@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Text Extractor for Claude",
+  "version": "1.0",
+  "description": "Extracts and copies text from specific elements on claude.ai/chat.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "extract_and_copy": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "Extract and Copy Text"
+    }
+  },
+  "action": {
+    "default_popup": "",
+    "default_icon": "icon.png"
+  }
+}
